@@ -25,7 +25,7 @@ const Login = () => {
             .then(res => {
                 console.log('LOGIN RES: ', res)
                 window.localStorage.setItem('token', res.data.payload)
-                // history.push('/friends')
+                history.push('/friends')
             })
             .catch(err => console.error('ERROR IN LOGIN', err))
         setCredentials({

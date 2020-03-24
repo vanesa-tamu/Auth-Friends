@@ -49,7 +49,7 @@ let friends = [
 
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(cors({ "origin": "*"}));
 
 function authenticator(req, res, next) {
   const { authorization } = req.headers;

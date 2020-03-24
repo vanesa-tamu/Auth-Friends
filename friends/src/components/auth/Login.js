@@ -23,11 +23,15 @@ const Login = () => {
         axiosWithAuth()
             .post('/api/login', credentials)
             .then(res => {
-                console.log('LOGIN RES: ')
-                localStorage.setItem('token', JSON.stringify(res.data.payload))
+                console.log('LOGIN RES: ', res)
+                window.localStorage.setItem('token', res.data.payload)
                 // history.push('/friends')
             })
             .catch(err => console.error('ERROR IN LOGIN', err))
+        setCredentials({
+            username: '',
+            password: ''
+        })
     }
 
     return(

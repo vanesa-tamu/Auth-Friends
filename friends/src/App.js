@@ -15,6 +15,9 @@ function App() {
       <li>
         <Link to="/friendsForm">New Friend</Link>
       </li>
+      <li>
+        <Link to="/friends">My Friends</Link>
+      </li>
     </ul>
 
     <Switch>

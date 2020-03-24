@@ -1,11 +1,11 @@
-import React from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth.js'
-import FriendsForm from './FriendForm.js'
-import { PrivateRoute } from './auth/PrivateRoute.js'
+import React from 'react'
 
-const Friend = () => {
+const Friend = ({friend}) => {
     return(
         <>
+            <h1>{friend.name}</h1>
+            <h2>{friend.age}</h2>
+            <h3>{friend.email}</h3>
         </>
     )
 }
